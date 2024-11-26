@@ -1,1 +1,10 @@
 Get http://localhost:3000/posts
+
+Post http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "username":"soumya"
+}
+
+
