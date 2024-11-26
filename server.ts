@@ -13,5 +13,8 @@ const posts = [
 app.get('/posts',(req:any,res:any)=>{
    res.json(posts)
 })
+app.get('/login',(req:any,res:any)=>{
+    
+})
 
 app.listen(3000)
