@@ -17,6 +17,10 @@ let refreshTokens:any[] = []
 // app.get('/posts',authenticateToken,(req:any,res:any)=>{
 //    res.json(posts.filter((post=>post.username === req.user.name)))
 // })
+app.delete('/logout',(req:any,res:any)=>{
+    refreshTokens = refreshTokens.filter(token => token!== req.body.token)
+    res.sendStatus(204)
+})
 app.post('/token',(req:any,res:any)=>{
     const refreshToken = req.body.token
     if(refreshToken == null) return res.sendStatus(401)
